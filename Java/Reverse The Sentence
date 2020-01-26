@@ -1,0 +1,26 @@
+import java.util.Scanner;
+class Program
+{
+    
+    public String splitstring(String input){
+        String word[]=input.split(" "); //Putting string in Array
+        String output =" ";
+for(int i=word.length-1;i>=0;i--){
+    output=output+word[i]+" ";
+}
+return output;
+    }
+}
+
+//Main method
+
+public class Test{
+    public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    String input=sc.nextLine();
+    Program pg=new Program();
+    
+System.out.println("Input::"+input); System.out.println("Output::"+pg.splitstring(input ));
+    
+    }
+    }
