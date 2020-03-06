@@ -1,0 +1,29 @@
+#include<stdio.h>
+void main(){
+    int first,last,mid,key;
+    int arr[10]={1,4,8,10,40,100,200,400,500,1000};
+    printf("Enter Key");
+    scanf("%d",&key);
+
+    first=0;
+    last=9;
+    mid=(first+last)/2;
+    while(first<=last){
+        if(arr[mid]==key){
+        printf("%d found at index %d\n",key,mid+1);
+        break;}
+        else
+        {
+             if(key>arr[mid]){
+               first = mid+1;
+               mid=(first+last)/2;  
+             }
+             else
+             {
+                 last = mid-1;
+             } 
+        }
+    }
+    if(first>last)
+    printf("not found");
+}
